@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Quarto
+.quarto/
+_freeze/
+.Rproj.user/
+*.quarto_ipynb
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Datos pesados (descomenta si el proyecto lo requiere)
+# data/raw/
+# *.parquet
+# *.sqlite
+
+# Salidas temporales
+*.log
+*.tmp
+
+# NOTA: docs/ NO se ignora: es la salida que publica GitHub Pages.

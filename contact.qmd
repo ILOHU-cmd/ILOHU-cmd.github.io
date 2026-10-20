@@ -1,0 +1,61 @@
+---
+title: "Contacto"
+description: "Contacta a Emerson Ballesteros Díaz para oportunidades de análisis de datos y seguridad."
+---
+
+## Hablemos {.unnumbered}
+
+Estoy buscando mi primera oportunidad como **Data Analyst** o **Security Data Analyst**. También me interesan las prácticas profesionales, los proyectos freelance y las conversaciones sobre datos y seguridad.
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### Correo
+
+[COMPLETAR: tu-correo@dominio.com]
+
+La forma más directa de contactarme. Respondo en [COMPLETAR: plazo].
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### GitHub
+
+[@ILOHU-cmd](https://github.com/ILOHU-cmd)
+
+Repositorios, notebooks y código de mis proyectos.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### LinkedIn
+
+[COMPLETAR: enlace a tu perfil]
+
+Experiencia, formación y recomendaciones.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.project-card}
+### Ubicación
+
+Bucaramanga, Santander, Colombia
+
+Disponibilidad: [COMPLETAR: presencial, híbrido o remoto].
+:::
+:::
+:::
+
+## Qué incluir en tu mensaje {.unnumbered}
+
+- El rol o proyecto que tienes en mente.
+- Las habilidades o herramientas que necesitas.
+- El contexto del equipo o de la empresa.
+- Fechas o plazos relevantes.
+
+::: {.callout-note}
+**Para publicar:** reemplaza los `[COMPLETAR]` y convierte el correo en un enlace `mailto:`, por ejemplo `[tu-correo@dominio.com](mailto:tu-correo@dominio.com)`. Así quien haga clic podrá escribirte directamente.
+:::

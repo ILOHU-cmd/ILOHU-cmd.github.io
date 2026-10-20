@@ -1,0 +1,111 @@
+---
+title: "Electrolineras UIS"
+description: "Análisis de red vial y simulación de demanda para explorar la ubicación de puntos de carga de vehículos eléctricos en Bucaramanga."
+author: "Emerson Ballesteros Díaz"
+date: "2026-05-26"
+categories: [analitica, optimizacion, python]
+format:
+  html:
+    toc: true
+---
+
+[← Volver a proyectos](../projects.qmd){.btn .btn-sm .btn-outline-secondary}
+
+## Problema
+
+La adopción de vehículos eléctricos depende en buena medida de contar con puntos de carga bien ubicados. Instalar electrolineras sin analizar la red vial y la demanda puede dejar zonas sin cobertura o generar puntos subutilizados.
+
+- **Contexto:** movilidad eléctrica en Bucaramanga y el área metropolitana.
+- **Pregunta principal:** ¿dónde conviene ubicar puntos de carga para maximizar cobertura y uso?
+- **Decisión que habilita:** priorizar ubicaciones y dimensionar la infraestructura.
+
+## Datos
+
+| Aspecto | Detalle |
+|---------|---------|
+| Fuente | Grafo vial de OpenStreetMap (OSMnx) y datos de electrolineras y puntos fijos del proyecto |
+| Periodo | [COMPLETAR] |
+| Volumen | [COMPLETAR: nodos, aristas y puntos candidatos] |
+| Variables clave | distancia, tiempo de viaje, demanda, capacidad, ubicación |
+| Limitaciones | Datos de demanda simulados; no reemplazan un estudio de campo |
+
+**Estructura:** el grafo vial se carga desde `datos/raw/grafo_bga.graphml`; las electrolineras y los puntos fijos están en `datos/data.py`. La simulación genera historial de recargas para entrenar el modelo.
+
+## Método
+
+1. **Construcción del grafo:** descarga y limpieza de la red vial con OSMnx y NetworkX.
+2. **Análisis espacial:** cálculo de distancias, cobertura y tiempos de viaje desde puntos candidatos.
+3. **Simulación:** generación de viajes y recargas para estimar demanda por zona.
+4. **Modelado:** Random Forest y regresión logística para predecir demanda o probabilidad de uso.
+5. **Visualización:** mapas con Folium y gráficos con Matplotlib.
+6. **Interfaz:** menú de consola para ejecutar escenarios y revisar resultados.
+
+**Stack:** Python, OSMnx, NetworkX, scikit-learn, pandas, Folium y Matplotlib.
+
+## Resultados
+
+::: {.metric-grid}
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Cobertura de la demanda
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Reducción de distancia media
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+F1 del modelo
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Puntos candidatos evaluados
+:::
+:::
+
+| Métrica | Escenario base | Escenario optimizado | Comentario |
+|---------|----------------|----------------------|------------|
+| Cobertura | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| Distancia media al punto | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| Demanda atendida | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| Métrica del modelo | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+
+**Hallazgos principales:**
+
+- [COMPLETAR: zona con mayor demanda insatisfecha].
+- [COMPLETAR: variable más importante del modelo].
+- [COMPLETAR: sensibilidad a la cantidad de puntos instalados].
+
+## Insight de negocio
+
+::: {.callout-tip}
+**Insight:** [COMPLETAR: por ejemplo, "un número reducido de puntos estratégicos cubre la mayor parte de la demanda, así que conviene priorizar ubicaciones por impacto antes que por cantidad"].
+:::
+
+- **Recomendación 1:** [COMPLETAR: ubicación prioritaria].
+- **Recomendación 2:** [COMPLETAR: capacidad sugerida por punto].
+- **Siguiente paso:** [COMPLETAR: validar con datos reales de tráfico o con una encuesta de demanda].
+
+## Enlace al repo
+
+- **Repositorio:** [ILOHU-cmd/iielectrolineras_v2](https://github.com/ILOHU-cmd/iielectrolineras_v2)
+- **Documentación:** [COMPLETAR: enlace al informe o notebook]
+- **Cómo reproducirlo:**
+
+```bash
+git clone https://github.com/ILOHU-cmd/iielectrolineras_v2.git
+cd iielectrolineras_v2
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+
+> El grafo vial debe descargarse con OSMnx o copiarse en `datos/raw/grafo_bga.graphml` antes de ejecutar el proyecto.
+
+---
+
+[← Volver a proyectos](../projects.qmd)

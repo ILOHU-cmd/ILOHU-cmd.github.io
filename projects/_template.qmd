@@ -1,0 +1,113 @@
+---
+title: "Título del proyecto"
+description: "Una frase que explique qué problema resuelve y con qué datos."
+author: "Emerson Ballesteros Díaz"
+date: "2026-01-01"
+categories: [data-analysis]
+format:
+  html:
+    toc: true
+---
+
+<!--
+  PLANTILLA DE PÁGINA DE PROYECTO
+  1. Copia este archivo: cp projects/_template.qmd projects/mi-proyecto.qmd
+  2. Cambia el título, la descripción, la fecha y las categorías.
+  3. Completa cada sección y reemplaza los [COMPLETAR].
+  4. Agrega la tarjeta del proyecto en projects.qmd.
+  5. Borra este comentario y el callout de la plantilla.
+-->
+
+[← Volver a proyectos](../projects.qmd){.btn .btn-sm .btn-outline-secondary}
+
+::: {.callout-warning}
+**Plantilla reutilizable.** Copia este archivo, renómbralo y elimina este aviso. Mantén las seis secciones para que todos los proyectos se puedan comparar.
+:::
+
+## Problema
+
+¿Qué pregunta o necesidad origina el proyecto? Describe el contexto, quién se beneficia y qué decisión se quiere tomar con los resultados.
+
+- **Contexto:** [COMPLETAR]
+- **Pregunta principal:** [COMPLETAR]
+- **Decisión que habilita:** [COMPLETAR]
+
+## Datos
+
+Explica el origen de los datos, su tamaño, las variables principales y sus limitaciones. Si los datos son sensibles, indica cómo los anonimizaste.
+
+| Aspecto | Detalle |
+|---------|---------|
+| Fuente | [COMPLETAR] |
+| Periodo | [COMPLETAR] |
+| Volumen | [COMPLETAR: filas, registros o eventos] |
+| Variables clave | [COMPLETAR] |
+| Limitaciones | [COMPLETAR] |
+
+## Método
+
+Resume los pasos del análisis y justifica las decisiones importantes.
+
+1. **Limpieza:** [COMPLETAR]
+2. **Análisis exploratorio:** [COMPLETAR]
+3. **Modelado o cálculo:** [COMPLETAR]
+4. **Evaluación:** [COMPLETAR]
+
+::: {.callout-note}
+Si usaste un modelo, indica la línea base contra la que lo comparaste y cómo elegiste los hiperparámetros o el umbral.
+:::
+
+## Resultados
+
+Presenta las métricas principales antes de interpretarlas. Usa números absolutos y relativos, y aclara el periodo de medición.
+
+::: {.metric-grid}
+::: {.metric}
+[XX %]{.metric-value}
+Métrica principal
+:::
+
+::: {.metric}
+[XX %]{.metric-value}
+Métrica secundaria
+:::
+
+::: {.metric}
+[XX]{.metric-value}
+Tiempo o costo ahorrado
+:::
+:::
+
+| Métrica | Línea base | Resultado | Comentario |
+|---------|------------|-----------|------------|
+| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| [COMPLETAR] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+
+**Hallazgos principales:**
+
+- [COMPLETAR: hallazgo 1]
+- [COMPLETAR: hallazgo 2]
+- [COMPLETAR: hallazgo 3]
+
+## Insight de negocio
+
+Traduce los resultados a una recomendación concreta. ¿Qué debería hacer distinto la persona o empresa? ¿Qué riesgo se evita o qué oportunidad se aprovecha?
+
+::: {.callout-tip}
+**Insight:** [COMPLETAR: una frase accionable que resuma el valor del proyecto].
+:::
+
+- **Recomendación 1:** [COMPLETAR]
+- **Recomendación 2:** [COMPLETAR]
+- **Siguiente paso:** [COMPLETAR]
+
+## Enlace al repo
+
+- **Repositorio:** [COMPLETAR: nombre del repo](https://github.com/ILOHU-cmd/COMPLETAR)
+- **Notebook o demo:** [COMPLETAR]
+- **Datos de ejemplo:** [COMPLETAR]
+- **Cómo reproducirlo:** [COMPLETAR: comando o pasos]
+
+---
+
+[← Volver a proyectos](../projects.qmd)

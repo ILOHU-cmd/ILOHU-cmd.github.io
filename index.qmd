@@ -1,0 +1,99 @@
+---
+title: "Sobre mí"
+description: "Emerson Ballesteros Díaz, estudiante de Ingeniería en Ciencia de Datos en la UIS. Portafolio de análisis de datos y seguridad."
+---
+
+::: {.hero}
+## Emerson Ballesteros Díaz
+
+**Estudiante de Ingeniería en Ciencia de Datos · Universidad Industrial de Santander**
+
+Convierto datos en decisiones. Busco mi primera oportunidad como **Data Analyst** o **Security Data Analyst**, con un rumbo claro hacia el **Blue Team**.
+
+[Ver proyectos](projects.qmd){.btn .btn-primary}
+[Conocer mi perfil](cv.qmd){.btn .btn-outline-secondary}
+:::
+
+## Perfil {.unnumbered}
+
+Soy estudiante de Ingeniería en Ciencia de Datos en la UIS, en Bucaramanga, Colombia. Me formo para responder preguntas de negocio con datos: desde la limpieza y el modelado hasta el análisis, la visualización y la comunicación de hallazgos.
+
+Mi interés principal es la analítica aplicada a la seguridad: detección de anomalías, análisis de logs y monitoreo. Quiero crecer hacia el **Blue Team** (SOC, threat detection y respuesta a incidentes) sin perder la base de negocio que aporta el análisis de datos.
+
+::: {.callout-note}
+**Disponibilidad:** abierto a prácticas, roles junior y proyectos freelance en análisis de datos. [Hablemos](contact.qmd).
+:::
+
+## En qué puedo aportar {.unnumbered}
+
+::: {.columns}
+::: {.column width="33%"}
+### Análisis de datos
+
+Limpieza, análisis exploratorio, SQL y visualización para convertir datos dispersos en hallazgos claros.
+:::
+
+::: {.column width="33%"}
+### Seguridad y detección
+
+Análisis de logs, métricas de riesgo y detección de anomalías para priorizar alertas y reducir el ruido.
+:::
+
+::: {.column width="34%"}
+### Automatización
+
+Python, notebooks reproducibles y documentación para que el análisis se pueda repetir y mantener.
+:::
+:::
+
+## Stack {.unnumbered}
+
+[Python]{.badge-skill} [pandas]{.badge-skill} [NumPy]{.badge-skill} [scikit-learn]{.badge-skill} [SQL]{.badge-skill} [PostgreSQL]{.badge-skill} [Jupyter]{.badge-skill} [Git]{.badge-skill} [Linux]{.badge-skill} [Power BI]{.badge-skill} [Tableau]{.badge-skill} [Excel]{.badge-skill} [Quarto]{.badge-skill}
+
+## Proyectos destacados {.unnumbered}
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+[Seguridad · Python]{.project-meta}
+
+### [Detección de anomalías en logs](projects/deteccion-anomalias-logs.qmd)
+
+Análisis de logs de autenticación para identificar accesos sospechosos y priorizar alertas.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+[Datos · Streamlit]{.project-meta}
+
+### [Polla Familiar](projects/polla-familiar.qmd)
+
+App para gestionar pronósticos de fútbol, calcular puntos y mantener la tabla de posiciones.
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+[Analítica · Optimización]{.project-meta}
+
+### [Electrolineras UIS](projects/electrolineras-uis.qmd)
+
+Análisis de red vial y simulación para explorar dónde ubicar puntos de carga de vehículos eléctricos.
+:::
+:::
+:::
+
+## Certificaciones {.unnumbered}
+
+Cuento con certificados de Google en análisis de datos y ciberseguridad. Puedes ver el detalle, las fechas y las credenciales en [CV y certificados](cv.qmd).
+
+## Actualmente {.unnumbered}
+
+- Profundizando en análisis de logs y detección de anomalías aplicadas a seguridad.
+- Documentando cada proyecto con problema, datos, método, resultados e insight de negocio.
+- [COMPLETAR: curso, certificación o proyecto en el que estés trabajando ahora]
+
+---
+
+¿Tienes una pregunta, una vacante o una idea de proyecto? [Escríbeme](contact.qmd).

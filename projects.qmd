@@ -1,0 +1,70 @@
+---
+title: "Proyectos"
+description: "Proyectos de análisis de datos, seguridad y visualización de Emerson Ballesteros Díaz."
+---
+
+Esta es una selección de proyectos académicos y personales. Cada página sigue la misma estructura: **problema, datos, método, resultados con métricas, insight de negocio y enlace al repositorio**.
+
+::: {.callout-tip}
+**Sobre los marcadores.** Los textos `[COMPLETAR]` señalan información que debes reemplazar con tus resultados reales antes de publicar el sitio. No inventes métricas: es mejor documentar el proceso y lo que sí mediste.
+:::
+
+## Proyectos {.unnumbered}
+
+::: {.grid}
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+[Seguridad · Python]{.project-meta}
+
+### [Detección de anomalías en logs de autenticación](projects/deteccion-anomalias-logs.qmd)
+
+Análisis de logs SSH para identificar intentos de acceso sospechosos, fuerza bruta y patrones fuera de horario.
+
+**Stack:** Python · pandas · scikit-learn
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+[Datos · Producto]{.project-meta}
+
+### [Polla Familiar](projects/polla-familiar.qmd)
+
+Aplicación web para registrar pronósticos de fútbol, calcular puntos y mostrar la tabla de posiciones de la familia.
+
+**Stack:** Python · Streamlit · pandas
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.project-card}
+[Analítica · Optimización]{.project-meta}
+
+### [Electrolineras UIS](projects/electrolineras-uis.qmd)
+
+Análisis de la red vial de Bucaramanga y simulación de demanda para explorar la ubicación de puntos de carga.
+
+**Stack:** Python · OSMnx · NetworkX · scikit-learn
+:::
+:::
+:::
+
+## Otros trabajos {.unnumbered}
+
+| Proyecto | Tema | Repositorio |
+|----------|------|-------------|
+| Prueba de ordenamientos | Comparación empírica de 5 algoritmos de ordenamiento (Estructura de Datos, UIS) | [Ver repo](https://github.com/ILOHU-cmd/pruebaordenamientosestructuradedatos) |
+| [COMPLETAR: proyecto] | [COMPLETAR: tema] | [COMPLETAR] |
+
+## Cómo leo estos proyectos {.unnumbered}
+
+1. **Problema:** qué pregunta o necesidad justifica el trabajo.
+2. **Datos:** origen, volumen, variables y limitaciones.
+3. **Método:** decisiones de limpieza, análisis y modelado.
+4. **Resultados:** métricas comparables, no solo gráficos.
+5. **Insight de negocio:** qué haría distinto una persona o empresa con este hallazgo.
+6. **Repositorio:** código, datos de ejemplo y pasos para reproducirlo.
+
+::: {.callout-note}
+¿Quieres ver el detalle de un proyecto o conversar sobre una colaboración? [Escríbeme](contact.qmd).
+:::

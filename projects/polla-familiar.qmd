@@ -1,0 +1,108 @@
+---
+title: "Polla Familiar"
+description: "Aplicación en Streamlit para gestionar pronósticos de fútbol, calcular puntos y mostrar la tabla de posiciones."
+author: "Emerson Ballesteros Díaz"
+date: "2026-07-05"
+categories: [datos, streamlit, producto]
+format:
+  html:
+    toc: true
+---
+
+[← Volver a proyectos](../projects.qmd){.btn .btn-sm .btn-outline-secondary}
+
+## Problema
+
+Organizar una polla familiar de fútbol en una hoja de cálculo se vuelve frágil: los pronósticos se pierden, los puntos se calculan a mano y nadie sabe con certeza quién va ganando hasta que alguien revisa todas las filas.
+
+- **Contexto:** grupo familiar que pronostica marcadores de partidos de fútbol.
+- **Pregunta principal:** ¿cómo registrar pronósticos y calcular la tabla de posiciones de forma automática y confiable?
+- **Decisión que habilita:** consultar el ranking en cualquier momento y reducir discusiones por errores de cálculo.
+
+## Datos
+
+| Aspecto | Detalle |
+|---------|---------|
+| Fuente | Datos ingresados por los participantes y resultados cargados por el administrador |
+| Periodo | [COMPLETAR: fechas o torneo] |
+| Volumen | [COMPLETAR: participantes, partidos y pronósticos] |
+| Variables clave | participante, partido, marcador pronosticado, marcador final, puntos |
+| Limitaciones | Persistencia en JSON local; sin concurrencia para muchos usuarios |
+
+**Modelo de datos:** usuarios, partidos, pronósticos y resultados. La persistencia está aislada en `storage.py` para poder reemplazar el JSON por una base de datos sin tocar las páginas.
+
+## Método
+
+1. **Autenticación:** registro e inicio de sesión con contraseñas hasheadas (passlib + bcrypt).
+2. **Pronósticos:** cada participante registra el marcador antes del partido.
+3. **Puntuación:** reglas puras en `scoring.py` para asignar puntos según el resultado y el marcador.
+4. **Tabla de posiciones:** cálculo agregado con pandas y orden por puntos y criterios de desempate.
+5. **Administración:** carga de partidos y marcadores finales desde una página protegida.
+6. **Analítica:** historial y visualizaciones del desempeño de los participantes.
+
+**Stack:** Python, Streamlit, pandas, passlib/bcrypt y JSON como almacenamiento temporal.
+
+## Resultados
+
+::: {.metric-grid}
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Participantes
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Partidos gestionados
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Tiempo de actualización
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Errores de cálculo
+:::
+:::
+
+| Métrica | Antes (hoja de cálculo) | Con la app | Comentario |
+|---------|-------------------------|------------|------------|
+| Tiempo para actualizar la tabla | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| Errores de puntuación | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| Participación | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+
+**Hallazgos principales:**
+
+- [COMPLETAR: qué regla de puntuación genera más competencia].
+- [COMPLETAR: cuántos pronósticos se registran cerca del cierre].
+- [COMPLETAR: qué tan precisa es la multitud para predecir resultados].
+
+## Insight de negocio
+
+::: {.callout-tip}
+**Insight:** [COMPLETAR: por ejemplo, "automatizar la puntuación eliminó los reclamos por errores y aumentó la participación porque el ranking quedaba visible inmediatamente después de cada partido"].
+:::
+
+- **Recomendación 1:** [COMPLETAR: notificar el cierre de pronósticos].
+- **Recomendación 2:** [COMPLETAR: mostrar estadísticas que mantengan el interés].
+- **Siguiente paso:** [COMPLETAR: migrar a PostgreSQL y desplegar la app].
+
+## Enlace al repo
+
+- **Repositorio:** [ILOHU-cmd/pollafamiliar](https://github.com/ILOHU-cmd/pollafamiliar)
+- **Demo:** [COMPLETAR: enlace a Streamlit Cloud u otro despliegue]
+- **Cómo reproducirlo:**
+
+```bash
+git clone https://github.com/ILOHU-cmd/pollafamiliar.git
+cd pollafamiliar/polla_familiar
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+---
+
+[← Volver a proyectos](../projects.qmd)

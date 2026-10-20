@@ -1,0 +1,108 @@
+---
+title: "Detección de anomalías en logs de autenticación"
+description: "Análisis de logs SSH para identificar intentos de acceso sospechosos, fuerza bruta y patrones fuera de horario."
+author: "Emerson Ballesteros Díaz"
+date: "2026-10-19"
+categories: [seguridad, python, deteccion-de-anomalias]
+format:
+  html:
+    toc: true
+---
+
+[← Volver a proyectos](../projects.qmd){.btn .btn-sm .btn-outline-secondary}
+
+::: {.callout-warning}
+**Proyecto en construcción.** Las secciones marcadas con `[COMPLETAR]` se llenarán cuando termine el análisis y publique el repositorio.
+:::
+
+## Problema
+
+Un equipo de seguridad recibe cientos o miles de eventos de autenticación al día. Separar el ruido de un intento real de acceso no autorizado es lento y propenso a errores, y una alerta ignorada puede convertirse en un incidente.
+
+- **Contexto:** servidores Linux con acceso SSH y registros en `auth.log`.
+- **Pregunta principal:** ¿qué sesiones, usuarios o direcciones IP tienen un comportamiento anómalo que merezca revisión?
+- **Decisión que habilita:** priorizar alertas, bloquear IPs y ajustar reglas de detección.
+
+## Datos
+
+| Aspecto | Detalle |
+|---------|---------|
+| Fuente | [COMPLETAR: `auth.log` propio anonimizado o dataset público] |
+| Periodo | [COMPLETAR] |
+| Volumen | [COMPLETAR: eventos, usuarios e IPs únicas] |
+| Variables clave | timestamp, usuario, IP de origen, método de autenticación, resultado |
+| Limitaciones | [COMPLETAR: datos sintéticos, etiquetas incompletas, IPs anonimizadas] |
+
+**Nota de privacidad:** las IPs y los nombres de usuario se anonimizan antes de publicar cualquier muestra. No se incluyen credenciales ni datos personales.
+
+## Método
+
+1. **Parseo:** extraer fecha, usuario, IP, método y resultado de cada línea con expresiones regulares.
+2. **Ingeniería de características:** intentos fallidos por IP y por ventana de tiempo, usuarios distintos por IP, horario, frecuencia de acceso y relación éxito/fallo.
+3. **Línea base:** reglas simples (por ejemplo, más de N fallos en M minutos) y z-score por IP.
+4. **Detección no supervisada:** Isolation Forest sobre las características agregadas.
+5. **Evaluación:** comparar contra un conjunto etiquetado y ajustar el umbral según el costo de los falsos positivos.
+
+::: {.callout-note}
+La línea base es importante: un modelo solo aporta valor si supera reglas sencillas y si el equipo puede explicar por qué marcó una alerta.
+:::
+
+## Resultados
+
+::: {.metric-grid}
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Precisión
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Recall
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+F1
+:::
+
+::: {.metric}
+[COMPLETAR]{.metric-value}
+Falsos positivos por día
+:::
+:::
+
+| Métrica | Línea base | Resultado | Comentario |
+|---------|------------|-----------|------------|
+| Precisión | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| Recall | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| F1 | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+| Tiempo de triage | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+
+**Hallazgos principales:**
+
+- [COMPLETAR: patrón más frecuente, por ejemplo fuerza bruta distribuida]
+- [COMPLETAR: característica con mayor poder discriminante]
+- [COMPLETAR: limitación encontrada al validar]
+
+## Insight de negocio
+
+::: {.callout-tip}
+**Insight:** [COMPLETAR: una frase accionable, por ejemplo: "el 80 % de las alertas críticas se concentra en menos del 5 % de las IPs, así que conviene priorizar el bloqueo por IP antes que revisar evento por evento"].
+:::
+
+- **Recomendación 1:** [COMPLETAR: regla de bloqueo o umbral recomendado].
+- **Recomendación 2:** [COMPLETAR: cómo reducir falsos positivos sin perder detecciones].
+- **Siguiente paso:** [COMPLETAR: integrar con SIEM, automatizar el reporte o ampliar la ventana de análisis].
+
+## Enlace al repo
+
+- **Repositorio:** [COMPLETAR: URL del repositorio del proyecto]
+- **Notebook:** [COMPLETAR]
+- **Datos de ejemplo:** [COMPLETAR]
+- **Cómo reproducirlo:** [COMPLETAR: comandos y versión de Python]
+
+Mientras publico este repositorio, puedes ver los demás proyectos en [mi GitHub](https://github.com/ILOHU-cmd).
+
+---
+
+[← Volver a proyectos](../projects.qmd)

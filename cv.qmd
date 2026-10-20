@@ -1,0 +1,108 @@
+---
+title: "CV y certificados"
+description: "Hoja de vida, formación, habilidades y certificados de Emerson Ballesteros Díaz."
+---
+
+Estudiante de Ingeniería en Ciencia de Datos (UIS) con interés en **análisis de datos** y **analítica de seguridad**. Busco una primera oportunidad como Data Analyst o Security Data Analyst.
+
+::: {.callout-important}
+**Antes de publicar:** reemplaza todos los `[COMPLETAR]` por tus datos reales. Cuando tengas el PDF, guárdalo en `assets/emerson-ballesteros-cv.pdf` y activa el botón de descarga.
+:::
+
+[Descargar CV en PDF](assets/emerson-ballesteros-cv.pdf){.btn .btn-primary .btn-lg}
+
+## Educación {.unnumbered}
+
+::: {.cv-item}
+### Ingeniería en Ciencia de Datos
+
+**Universidad Industrial de Santander (UIS)** · Bucaramanga, Colombia
+
+[COMPLETAR: fecha de inicio] – [COMPLETAR: fecha de grado prevista]
+
+- Promedio acumulado: [COMPLETAR]
+- Cursos relevantes: estadística, bases de datos, machine learning, estructuras de datos, [COMPLETAR]
+:::
+
+## Habilidades {.unnumbered}
+
+::: {.columns}
+::: {.column width="33%"}
+### Datos
+
+- Python (pandas, NumPy, scikit-learn)
+- SQL y modelado de datos
+- Análisis exploratorio (EDA)
+- Visualización: Matplotlib, Seaborn, Plotly
+- [COMPLETAR: otra habilidad]
+:::
+
+::: {.column width="33%"}
+### Seguridad
+
+- Análisis de logs
+- Detección de anomalías
+- Métricas de riesgo y priorización de alertas
+- Fundamentos de redes y Linux
+- [COMPLETAR: otra habilidad]
+:::
+
+::: {.column width="34%"}
+### Herramientas
+
+- Git y GitHub
+- Jupyter / Quarto
+- Power BI / Tableau
+- Excel
+- [COMPLETAR: otra herramienta]
+:::
+:::
+
+## Certificaciones {.unnumbered}
+
+| Certificación | Emisor | Fecha | Credencial |
+|---------------|--------|-------|------------|
+| Google Data Analytics Professional Certificate | Google / Coursera | [COMPLETAR] | [COMPLETAR: enlace] |
+| Google Cybersecurity Professional Certificate | Google / Coursera | [COMPLETAR] | [COMPLETAR: enlace] |
+| [COMPLETAR: otra certificación] | [COMPLETAR] | [COMPLETAR] | [COMPLETAR] |
+
+::: {.callout-note}
+Si el certificado tiene una URL pública de verificación, agrégala en la columna **Credencial**. También puedes incluir una captura en `assets/certificados/` y enlazarla desde aquí.
+:::
+
+## Experiencia y proyectos {.unnumbered}
+
+::: {.cv-item}
+### Proyectos de portafolio
+
+**Análisis de datos y seguridad** · 2025 – presente
+
+- Detección de anomalías en logs de autenticación con Python y scikit-learn.
+- Aplicación de pronósticos de fútbol con Streamlit y pandas.
+- Análisis de red vial y simulación para ubicación de electrolineras.
+- [COMPLETAR: resultado o impacto de algún proyecto]
+:::
+
+::: {.cv-item}
+### Prácticas o experiencia laboral
+
+[COMPLETAR: empresa] · [COMPLETAR: cargo] · [COMPLETAR: fechas]
+
+- [COMPLETAR: responsabilidad o logro medible]
+- [COMPLETAR: responsabilidad o logro medible]
+:::
+
+## Idiomas {.unnumbered}
+
+- **Español:** nativo
+- **Inglés:** [COMPLETAR: nivel, por ejemplo B1 o B2]
+
+## Enlaces {.unnumbered}
+
+- GitHub: [ILOHU-cmd](https://github.com/ILOHU-cmd)
+- LinkedIn: [COMPLETAR]
+- Correo: [COMPLETAR]
+
+---
+
+¿Te interesa mi perfil? [Hablemos](contact.qmd).

@@ -1,0 +1,54 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "projects/*.qmd"
+  resources:
+    - "assets/**"
+
+website:
+  title: "Emerson Ballesteros Díaz"
+  description: "Portafolio de Ciencia de Datos de Emerson Ballesteros Díaz: análisis de datos, SQL, Python y seguridad."
+  site-url: "https://ilohu-cmd.github.io/"
+  repo-url: "https://github.com/ILOHU-cmd/ILOHU-cmd.github.io"
+  search: true
+  open-graph: true
+  navbar:
+    title: "Emerson Ballesteros"
+    left:
+      - text: "Sobre mí"
+        href: index.qmd
+      - text: "Proyectos"
+        href: projects.qmd
+      - text: "CV y certificados"
+        href: cv.qmd
+      - text: "Contacto"
+        href: contact.qmd
+    right:
+      - icon: github
+        href: "https://github.com/ILOHU-cmd"
+        aria-label: "GitHub"
+  page-footer:
+    left: "© 2026 Emerson Ballesteros Díaz"
+    center: "Bucaramanga, Colombia"
+    right: "Hecho con [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - custom.scss
+    toc: true
+    toc-title: "En esta página"
+    toc-depth: 3
+    number-sections: false
+    code-fold: true
+    code-copy: true
+    code-overflow: wrap
+    lang: es
+    link-external-newwindow: true
+    grid:
+      sidebar-width: 240px
+      body-width: 900px
+      margin-width: 240px
