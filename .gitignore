@@ -47,3 +47,6 @@ Thumbs.db
 *.tmp
 
 # NOTA: docs/ NO se ignora: es la salida que publica GitHub Pages.
+
+/.quarto/
+**/*.quarto_ipynb

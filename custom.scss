@@ -33,8 +33,10 @@ $footer-bg: #f4f7f7;
 
 .hero h2 {
   margin-top: 0;
+  padding-bottom: 0;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   letter-spacing: -0.02em;
+  border-bottom: 0;
 }
 
 .hero p {

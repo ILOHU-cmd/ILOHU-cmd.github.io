@@ -100,7 +100,7 @@ pip install -r requirements.txt
 4. Selecciona la rama **main** y la carpeta **/docs**. Guarda.
 5. El sitio queda en `https://ilohu-cmd.github.io/`.
 
-`docs/.nojekyll` evita que GitHub Pages procese el sitio con Jekyll.
+`docs/.nojekyll` evita que GitHub Pages procese el sitio con Jekyll. El archivo `.nojekyll` de la raíz se copia a `docs/` en cada render.
 
 Flujo típico después de editar contenido:
 

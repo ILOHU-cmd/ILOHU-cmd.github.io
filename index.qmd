@@ -4,7 +4,7 @@ description: "Emerson Ballesteros Díaz, estudiante de Ingeniería en Ciencia de
 ---
 
 ::: {.hero}
-## Emerson Ballesteros Díaz
+## Emerson Ballesteros Díaz {.unnumbered .unlisted}
 
 **Estudiante de Ingeniería en Ciencia de Datos · Universidad Industrial de Santander**
 

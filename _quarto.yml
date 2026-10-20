@@ -6,6 +6,7 @@ project:
     - "projects/*.qmd"
   resources:
     - "assets/**"
+    - ".nojekyll"
 
 website:
   title: "Emerson Ballesteros Díaz"

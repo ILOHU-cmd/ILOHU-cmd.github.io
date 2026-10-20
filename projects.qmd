@@ -9,7 +9,7 @@ Esta es una selección de proyectos académicos y personales. Cada página sigue
 **Sobre los marcadores.** Los textos `[COMPLETAR]` señalan información que debes reemplazar con tus resultados reales antes de publicar el sitio. No inventes métricas: es mejor documentar el proceso y lo que sí mediste.
 :::
 
-## Proyectos {.unnumbered}
+## Destacados {.unnumbered}
 
 ::: {.grid}
 ::: {.g-col-12 .g-col-md-4}

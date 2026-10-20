@@ -6,7 +6,7 @@ description: "Hoja de vida, formación, habilidades y certificados de Emerson Ba
 Estudiante de Ingeniería en Ciencia de Datos (UIS) con interés en **análisis de datos** y **analítica de seguridad**. Busco una primera oportunidad como Data Analyst o Security Data Analyst.
 
 ::: {.callout-important}
-**Antes de publicar:** reemplaza todos los `[COMPLETAR]` por tus datos reales. Cuando tengas el PDF, guárdalo en `assets/emerson-ballesteros-cv.pdf` y activa el botón de descarga.
+**Antes de publicar:** reemplaza todos los `[COMPLETAR]` por tus datos reales. El botón ya apunta a `assets/emerson-ballesteros-cv.pdf`, pero ese archivo es un marcador de posición: sustitúyelo por tu CV real.
 :::
 
 [Descargar CV en PDF](assets/emerson-ballesteros-cv.pdf){.btn .btn-primary .btn-lg}

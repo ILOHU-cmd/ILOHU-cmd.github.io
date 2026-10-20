@@ -1,0 +1,303 @@
+[
+  {
+    "objectID": "projects/polla-familiar.html",
+    "href": "projects/polla-familiar.html",
+    "title": "Polla Familiar",
+    "section": "",
+    "text": "← Volver a proyectos"
+  },
+  {
+    "objectID": "projects/polla-familiar.html#problema",
+    "href": "projects/polla-familiar.html#problema",
+    "title": "Polla Familiar",
+    "section": "Problema",
+    "text": "Problema\nOrganizar una polla familiar de fútbol en una hoja de cálculo se vuelve frágil: los pronósticos se pierden, los puntos se calculan a mano y nadie sabe con certeza quién va ganando hasta que alguien revisa todas las filas.\n\nContexto: grupo familiar que pronostica marcadores de partidos de fútbol.\nPregunta principal: ¿cómo registrar pronósticos y calcular la tabla de posiciones de forma automática y confiable?\nDecisión que habilita: consultar el ranking en cualquier momento y reducir discusiones por errores de cálculo."
+  },
+  {
+    "objectID": "projects/polla-familiar.html#datos",
+    "href": "projects/polla-familiar.html#datos",
+    "title": "Polla Familiar",
+    "section": "Datos",
+    "text": "Datos\n\n\n\n\n\n\n\nAspecto\nDetalle\n\n\n\n\nFuente\nDatos ingresados por los participantes y resultados cargados por el administrador\n\n\nPeriodo\n[COMPLETAR: fechas o torneo]\n\n\nVolumen\n[COMPLETAR: participantes, partidos y pronósticos]\n\n\nVariables clave\nparticipante, partido, marcador pronosticado, marcador final, puntos\n\n\nLimitaciones\nPersistencia en JSON local; sin concurrencia para muchos usuarios\n\n\n\nModelo de datos: usuarios, partidos, pronósticos y resultados. La persistencia está aislada en storage.py para poder reemplazar el JSON por una base de datos sin tocar las páginas."
+  },
+  {
+    "objectID": "projects/polla-familiar.html#método",
+    "href": "projects/polla-familiar.html#método",
+    "title": "Polla Familiar",
+    "section": "Método",
+    "text": "Método\n\nAutenticación: registro e inicio de sesión con contraseñas hasheadas (passlib + bcrypt).\nPronósticos: cada participante registra el marcador antes del partido.\nPuntuación: reglas puras en scoring.py para asignar puntos según el resultado y el marcador.\nTabla de posiciones: cálculo agregado con pandas y orden por puntos y criterios de desempate.\nAdministración: carga de partidos y marcadores finales desde una página protegida.\nAnalítica: historial y visualizaciones del desempeño de los participantes.\n\nStack: Python, Streamlit, pandas, passlib/bcrypt y JSON como almacenamiento temporal."
+  },
+  {
+    "objectID": "projects/polla-familiar.html#resultados",
+    "href": "projects/polla-familiar.html#resultados",
+    "title": "Polla Familiar",
+    "section": "Resultados",
+    "text": "Resultados\n\n\nCOMPLETAR Participantes\n\n\nCOMPLETAR Partidos gestionados\n\n\nCOMPLETAR Tiempo de actualización\n\n\nCOMPLETAR Errores de cálculo\n\n\n\n\n\n\n\n\n\n\n\nMétrica\nAntes (hoja de cálculo)\nCon la app\nComentario\n\n\n\n\nTiempo para actualizar la tabla\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\nErrores de puntuación\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\nParticipación\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\n\nHallazgos principales:\n\n[COMPLETAR: qué regla de puntuación genera más competencia].\n[COMPLETAR: cuántos pronósticos se registran cerca del cierre].\n[COMPLETAR: qué tan precisa es la multitud para predecir resultados]."
+  },
+  {
+    "objectID": "projects/polla-familiar.html#insight-de-negocio",
+    "href": "projects/polla-familiar.html#insight-de-negocio",
+    "title": "Polla Familiar",
+    "section": "Insight de negocio",
+    "text": "Insight de negocio\n\n\n\n\n\n\nTip\n\n\n\nInsight: [COMPLETAR: por ejemplo, “automatizar la puntuación eliminó los reclamos por errores y aumentó la participación porque el ranking quedaba visible inmediatamente después de cada partido”].\n\n\n\nRecomendación 1: [COMPLETAR: notificar el cierre de pronósticos].\nRecomendación 2: [COMPLETAR: mostrar estadísticas que mantengan el interés].\nSiguiente paso: [COMPLETAR: migrar a PostgreSQL y desplegar la app]."
+  },
+  {
+    "objectID": "projects/polla-familiar.html#enlace-al-repo",
+    "href": "projects/polla-familiar.html#enlace-al-repo",
+    "title": "Polla Familiar",
+    "section": "Enlace al repo",
+    "text": "Enlace al repo\n\nRepositorio: ILOHU-cmd/pollafamiliar\nDemo: [COMPLETAR: enlace a Streamlit Cloud u otro despliegue]\nCómo reproducirlo:\n\ngit clone https://github.com/ILOHU-cmd/pollafamiliar.git\ncd pollafamiliar/polla_familiar\npython3 -m venv .venv\nsource .venv/bin/activate\npip install -r requirements.txt\nstreamlit run app.py\n\n← Volver a proyectos"
+  },
+  {
+    "objectID": "projects/deteccion-anomalias-logs.html",
+    "href": "projects/deteccion-anomalias-logs.html",
+    "title": "Detección de anomalías en logs de autenticación",
+    "section": "",
+    "text": "← Volver a proyectos"
+  },
+  {
+    "objectID": "projects/deteccion-anomalias-logs.html#problema",
+    "href": "projects/deteccion-anomalias-logs.html#problema",
+    "title": "Detección de anomalías en logs de autenticación",
+    "section": "Problema",
+    "text": "Problema\nUn equipo de seguridad recibe cientos o miles de eventos de autenticación al día. Separar el ruido de un intento real de acceso no autorizado es lento y propenso a errores, y una alerta ignorada puede convertirse en un incidente.\n\nContexto: servidores Linux con acceso SSH y registros en auth.log.\nPregunta principal: ¿qué sesiones, usuarios o direcciones IP tienen un comportamiento anómalo que merezca revisión?\nDecisión que habilita: priorizar alertas, bloquear IPs y ajustar reglas de detección."
+  },
+  {
+    "objectID": "projects/deteccion-anomalias-logs.html#datos",
+    "href": "projects/deteccion-anomalias-logs.html#datos",
+    "title": "Detección de anomalías en logs de autenticación",
+    "section": "Datos",
+    "text": "Datos\n\n\n\n\n\n\n\nAspecto\nDetalle\n\n\n\n\nFuente\n[COMPLETAR: auth.log propio anonimizado o dataset público]\n\n\nPeriodo\n[COMPLETAR]\n\n\nVolumen\n[COMPLETAR: eventos, usuarios e IPs únicas]\n\n\nVariables clave\ntimestamp, usuario, IP de origen, método de autenticación, resultado\n\n\nLimitaciones\n[COMPLETAR: datos sintéticos, etiquetas incompletas, IPs anonimizadas]\n\n\n\nNota de privacidad: las IPs y los nombres de usuario se anonimizan antes de publicar cualquier muestra. No se incluyen credenciales ni datos personales."
+  },
+  {
+    "objectID": "projects/deteccion-anomalias-logs.html#método",
+    "href": "projects/deteccion-anomalias-logs.html#método",
+    "title": "Detección de anomalías en logs de autenticación",
+    "section": "Método",
+    "text": "Método\n\nParseo: extraer fecha, usuario, IP, método y resultado de cada línea con expresiones regulares.\nIngeniería de características: intentos fallidos por IP y por ventana de tiempo, usuarios distintos por IP, horario, frecuencia de acceso y relación éxito/fallo.\nLínea base: reglas simples (por ejemplo, más de N fallos en M minutos) y z-score por IP.\nDetección no supervisada: Isolation Forest sobre las características agregadas.\nEvaluación: comparar contra un conjunto etiquetado y ajustar el umbral según el costo de los falsos positivos.\n\n\n\n\n\n\n\nNota\n\n\n\nLa línea base es importante: un modelo solo aporta valor si supera reglas sencillas y si el equipo puede explicar por qué marcó una alerta."
+  },
+  {
+    "objectID": "projects/deteccion-anomalias-logs.html#resultados",
+    "href": "projects/deteccion-anomalias-logs.html#resultados",
+    "title": "Detección de anomalías en logs de autenticación",
+    "section": "Resultados",
+    "text": "Resultados\n\n\nCOMPLETAR Precisión\n\n\nCOMPLETAR Recall\n\n\nCOMPLETAR F1\n\n\nCOMPLETAR Falsos positivos por día\n\n\n\n\n\nMétrica\nLínea base\nResultado\nComentario\n\n\n\n\nPrecisión\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\nRecall\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\nF1\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\nTiempo de triage\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\n\nHallazgos principales:\n\n[COMPLETAR: patrón más frecuente, por ejemplo fuerza bruta distribuida]\n[COMPLETAR: característica con mayor poder discriminante]\n[COMPLETAR: limitación encontrada al validar]"
+  },
+  {
+    "objectID": "projects/deteccion-anomalias-logs.html#insight-de-negocio",
+    "href": "projects/deteccion-anomalias-logs.html#insight-de-negocio",
+    "title": "Detección de anomalías en logs de autenticación",
+    "section": "Insight de negocio",
+    "text": "Insight de negocio\n\n\n\n\n\n\nTip\n\n\n\nInsight: [COMPLETAR: una frase accionable, por ejemplo: “el 80 % de las alertas críticas se concentra en menos del 5 % de las IPs, así que conviene priorizar el bloqueo por IP antes que revisar evento por evento”].\n\n\n\nRecomendación 1: [COMPLETAR: regla de bloqueo o umbral recomendado].\nRecomendación 2: [COMPLETAR: cómo reducir falsos positivos sin perder detecciones].\nSiguiente paso: [COMPLETAR: integrar con SIEM, automatizar el reporte o ampliar la ventana de análisis]."
+  },
+  {
+    "objectID": "projects/deteccion-anomalias-logs.html#enlace-al-repo",
+    "href": "projects/deteccion-anomalias-logs.html#enlace-al-repo",
+    "title": "Detección de anomalías en logs de autenticación",
+    "section": "Enlace al repo",
+    "text": "Enlace al repo\n\nRepositorio: [COMPLETAR: URL del repositorio del proyecto]\nNotebook: [COMPLETAR]\nDatos de ejemplo: [COMPLETAR]\nCómo reproducirlo: [COMPLETAR: comandos y versión de Python]\n\nMientras publico este repositorio, puedes ver los demás proyectos en mi GitHub.\n\n← Volver a proyectos"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "Estudiante de Ingeniería en Ciencia de Datos · Universidad Industrial de Santander\nConvierto datos en decisiones. Busco mi primera oportunidad como Data Analyst o Security Data Analyst, con un rumbo claro hacia el Blue Team.\nVer proyectos Conocer mi perfil"
+  },
+  {
+    "objectID": "index.html#emerson-ballesteros-díaz",
+    "href": "index.html#emerson-ballesteros-díaz",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "Estudiante de Ingeniería en Ciencia de Datos · Universidad Industrial de Santander\nConvierto datos en decisiones. Busco mi primera oportunidad como Data Analyst o Security Data Analyst, con un rumbo claro hacia el Blue Team.\nVer proyectos Conocer mi perfil"
+  },
+  {
+    "objectID": "index.html#perfil",
+    "href": "index.html#perfil",
+    "title": "Sobre mí",
+    "section": "Perfil",
+    "text": "Perfil\nSoy estudiante de Ingeniería en Ciencia de Datos en la UIS, en Bucaramanga, Colombia. Me formo para responder preguntas de negocio con datos: desde la limpieza y el modelado hasta el análisis, la visualización y la comunicación de hallazgos.\nMi interés principal es la analítica aplicada a la seguridad: detección de anomalías, análisis de logs y monitoreo. Quiero crecer hacia el Blue Team (SOC, threat detection y respuesta a incidentes) sin perder la base de negocio que aporta el análisis de datos.\n\n\n\n\n\n\nNota\n\n\n\nDisponibilidad: abierto a prácticas, roles junior y proyectos freelance en análisis de datos. Hablemos."
+  },
+  {
+    "objectID": "index.html#en-qué-puedo-aportar",
+    "href": "index.html#en-qué-puedo-aportar",
+    "title": "Sobre mí",
+    "section": "En qué puedo aportar",
+    "text": "En qué puedo aportar\n\n\n\nAnálisis de datos\nLimpieza, análisis exploratorio, SQL y visualización para convertir datos dispersos en hallazgos claros.\n\n\n\nSeguridad y detección\nAnálisis de logs, métricas de riesgo y detección de anomalías para priorizar alertas y reducir el ruido.\n\n\n\nAutomatización\nPython, notebooks reproducibles y documentación para que el análisis se pueda repetir y mantener."
+  },
+  {
+    "objectID": "index.html#stack",
+    "href": "index.html#stack",
+    "title": "Sobre mí",
+    "section": "Stack",
+    "text": "Stack\nPython pandas NumPy scikit-learn SQL PostgreSQL Jupyter Git Linux Power BI Tableau Excel Quarto"
+  },
+  {
+    "objectID": "index.html#proyectos-destacados",
+    "href": "index.html#proyectos-destacados",
+    "title": "Sobre mí",
+    "section": "Proyectos destacados",
+    "text": "Proyectos destacados\n\n\n\nSeguridad · Python\n\nDetección de anomalías en logs\nAnálisis de logs de autenticación para identificar accesos sospechosos y priorizar alertas.\n\n\n\n\n\nDatos · Streamlit\n\nPolla Familiar\nApp para gestionar pronósticos de fútbol, calcular puntos y mantener la tabla de posiciones.\n\n\n\n\n\nAnalítica · Optimización\n\nElectrolineras UIS\nAnálisis de red vial y simulación para explorar dónde ubicar puntos de carga de vehículos eléctricos."
+  },
+  {
+    "objectID": "index.html#certificaciones",
+    "href": "index.html#certificaciones",
+    "title": "Sobre mí",
+    "section": "Certificaciones",
+    "text": "Certificaciones\nCuento con certificados de Google en análisis de datos y ciberseguridad. Puedes ver el detalle, las fechas y las credenciales en CV y certificados."
+  },
+  {
+    "objectID": "index.html#actualmente",
+    "href": "index.html#actualmente",
+    "title": "Sobre mí",
+    "section": "Actualmente",
+    "text": "Actualmente\n\nProfundizando en análisis de logs y detección de anomalías aplicadas a seguridad.\nDocumentando cada proyecto con problema, datos, método, resultados e insight de negocio.\n[COMPLETAR: curso, certificación o proyecto en el que estés trabajando ahora]\n\n\n¿Tienes una pregunta, una vacante o una idea de proyecto? Escríbeme."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contacto",
+    "section": "",
+    "text": "Estoy buscando mi primera oportunidad como Data Analyst o Security Data Analyst. También me interesan las prácticas profesionales, los proyectos freelance y las conversaciones sobre datos y seguridad.\n\n\n\n\n[COMPLETAR: tu-correo@dominio.com]\nLa forma más directa de contactarme. Respondo en [COMPLETAR: plazo].\n\n\n\n\n\n@ILOHU-cmd\nRepositorios, notebooks y código de mis proyectos.\n\n\n\n\n\n[COMPLETAR: enlace a tu perfil]\nExperiencia, formación y recomendaciones.\n\n\n\n\n\nBucaramanga, Santander, Colombia\nDisponibilidad: [COMPLETAR: presencial, híbrido o remoto]."
+  },
+  {
+    "objectID": "contact.html#hablemos",
+    "href": "contact.html#hablemos",
+    "title": "Contacto",
+    "section": "",
+    "text": "Estoy buscando mi primera oportunidad como Data Analyst o Security Data Analyst. También me interesan las prácticas profesionales, los proyectos freelance y las conversaciones sobre datos y seguridad.\n\n\n\n\n[COMPLETAR: tu-correo@dominio.com]\nLa forma más directa de contactarme. Respondo en [COMPLETAR: plazo].\n\n\n\n\n\n@ILOHU-cmd\nRepositorios, notebooks y código de mis proyectos.\n\n\n\n\n\n[COMPLETAR: enlace a tu perfil]\nExperiencia, formación y recomendaciones.\n\n\n\n\n\nBucaramanga, Santander, Colombia\nDisponibilidad: [COMPLETAR: presencial, híbrido o remoto]."
+  },
+  {
+    "objectID": "contact.html#qué-incluir-en-tu-mensaje",
+    "href": "contact.html#qué-incluir-en-tu-mensaje",
+    "title": "Contacto",
+    "section": "Qué incluir en tu mensaje",
+    "text": "Qué incluir en tu mensaje\n\nEl rol o proyecto que tienes en mente.\nLas habilidades o herramientas que necesitas.\nEl contexto del equipo o de la empresa.\nFechas o plazos relevantes.\n\n\n\n\n\n\n\nNota\n\n\n\nPara publicar: reemplaza los [COMPLETAR] y convierte el correo en un enlace mailto:, por ejemplo [tu-correo@dominio.com](mailto:tu-correo@dominio.com). Así quien haga clic podrá escribirte directamente."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "CV y certificados",
+    "section": "",
+    "text": "Estudiante de Ingeniería en Ciencia de Datos (UIS) con interés en análisis de datos y analítica de seguridad. Busco una primera oportunidad como Data Analyst o Security Data Analyst.\nDescargar CV en PDF"
+  },
+  {
+    "objectID": "cv.html#educación",
+    "href": "cv.html#educación",
+    "title": "CV y certificados",
+    "section": "Educación",
+    "text": "Educación\n\nIngeniería en Ciencia de Datos\nUniversidad Industrial de Santander (UIS) · Bucaramanga, Colombia\n[COMPLETAR: fecha de inicio] – [COMPLETAR: fecha de grado prevista]\n\nPromedio acumulado: [COMPLETAR]\nCursos relevantes: estadística, bases de datos, machine learning, estructuras de datos, [COMPLETAR]"
+  },
+  {
+    "objectID": "cv.html#habilidades",
+    "href": "cv.html#habilidades",
+    "title": "CV y certificados",
+    "section": "Habilidades",
+    "text": "Habilidades\n\n\n\nDatos\n\nPython (pandas, NumPy, scikit-learn)\nSQL y modelado de datos\nAnálisis exploratorio (EDA)\nVisualización: Matplotlib, Seaborn, Plotly\n[COMPLETAR: otra habilidad]\n\n\n\n\nSeguridad\n\nAnálisis de logs\nDetección de anomalías\nMétricas de riesgo y priorización de alertas\nFundamentos de redes y Linux\n[COMPLETAR: otra habilidad]\n\n\n\n\nHerramientas\n\nGit y GitHub\nJupyter / Quarto\nPower BI / Tableau\nExcel\n[COMPLETAR: otra herramienta]"
+  },
+  {
+    "objectID": "cv.html#certificaciones",
+    "href": "cv.html#certificaciones",
+    "title": "CV y certificados",
+    "section": "Certificaciones",
+    "text": "Certificaciones\n\n\n\n\n\n\n\n\n\nCertificación\nEmisor\nFecha\nCredencial\n\n\n\n\nGoogle Data Analytics Professional Certificate\nGoogle / Coursera\n[COMPLETAR]\n[COMPLETAR: enlace]\n\n\nGoogle Cybersecurity Professional Certificate\nGoogle / Coursera\n[COMPLETAR]\n[COMPLETAR: enlace]\n\n\n[COMPLETAR: otra certificación]\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\n\n\n\n\n\n\n\nNota\n\n\n\nSi el certificado tiene una URL pública de verificación, agrégala en la columna Credencial. También puedes incluir una captura en assets/certificados/ y enlazarla desde aquí."
+  },
+  {
+    "objectID": "cv.html#experiencia-y-proyectos",
+    "href": "cv.html#experiencia-y-proyectos",
+    "title": "CV y certificados",
+    "section": "Experiencia y proyectos",
+    "text": "Experiencia y proyectos\n\nProyectos de portafolio\nAnálisis de datos y seguridad · 2025 – presente\n\nDetección de anomalías en logs de autenticación con Python y scikit-learn.\nAplicación de pronósticos de fútbol con Streamlit y pandas.\nAnálisis de red vial y simulación para ubicación de electrolineras.\n[COMPLETAR: resultado o impacto de algún proyecto]\n\n\n\nPrácticas o experiencia laboral\n[COMPLETAR: empresa] · [COMPLETAR: cargo] · [COMPLETAR: fechas]\n\n[COMPLETAR: responsabilidad o logro medible]\n[COMPLETAR: responsabilidad o logro medible]"
+  },
+  {
+    "objectID": "cv.html#idiomas",
+    "href": "cv.html#idiomas",
+    "title": "CV y certificados",
+    "section": "Idiomas",
+    "text": "Idiomas\n\nEspañol: nativo\nInglés: [COMPLETAR: nivel, por ejemplo B1 o B2]"
+  },
+  {
+    "objectID": "cv.html#enlaces",
+    "href": "cv.html#enlaces",
+    "title": "CV y certificados",
+    "section": "Enlaces",
+    "text": "Enlaces\n\nGitHub: ILOHU-cmd\nLinkedIn: [COMPLETAR]\nCorreo: [COMPLETAR]\n\n\n¿Te interesa mi perfil? Hablemos."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Proyectos",
+    "section": "",
+    "text": "Esta es una selección de proyectos académicos y personales. Cada página sigue la misma estructura: problema, datos, método, resultados con métricas, insight de negocio y enlace al repositorio."
+  },
+  {
+    "objectID": "projects.html#destacados",
+    "href": "projects.html#destacados",
+    "title": "Proyectos",
+    "section": "Destacados",
+    "text": "Destacados\n\n\n\nSeguridad · Python\n\nDetección de anomalías en logs de autenticación\nAnálisis de logs SSH para identificar intentos de acceso sospechosos, fuerza bruta y patrones fuera de horario.\nStack: Python · pandas · scikit-learn\n\n\n\n\n\nDatos · Producto\n\nPolla Familiar\nAplicación web para registrar pronósticos de fútbol, calcular puntos y mostrar la tabla de posiciones de la familia.\nStack: Python · Streamlit · pandas\n\n\n\n\n\nAnalítica · Optimización\n\nElectrolineras UIS\nAnálisis de la red vial de Bucaramanga y simulación de demanda para explorar la ubicación de puntos de carga.\nStack: Python · OSMnx · NetworkX · scikit-learn"
+  },
+  {
+    "objectID": "projects.html#otros-trabajos",
+    "href": "projects.html#otros-trabajos",
+    "title": "Proyectos",
+    "section": "Otros trabajos",
+    "text": "Otros trabajos\n\n\n\nProyecto\nTema\nRepositorio\n\n\n\n\nPrueba de ordenamientos\nComparación empírica de 5 algoritmos de ordenamiento (Estructura de Datos, UIS)\nVer repo\n\n\n[COMPLETAR: proyecto]\n[COMPLETAR: tema]\n[COMPLETAR]"
+  },
+  {
+    "objectID": "projects.html#cómo-leo-estos-proyectos",
+    "href": "projects.html#cómo-leo-estos-proyectos",
+    "title": "Proyectos",
+    "section": "Cómo leo estos proyectos",
+    "text": "Cómo leo estos proyectos\n\nProblema: qué pregunta o necesidad justifica el trabajo.\nDatos: origen, volumen, variables y limitaciones.\nMétodo: decisiones de limpieza, análisis y modelado.\nResultados: métricas comparables, no solo gráficos.\nInsight de negocio: qué haría distinto una persona o empresa con este hallazgo.\nRepositorio: código, datos de ejemplo y pasos para reproducirlo.\n\n\n\n\n\n\n\nNota\n\n\n\n¿Quieres ver el detalle de un proyecto o conversar sobre una colaboración? Escríbeme."
+  },
+  {
+    "objectID": "projects/electrolineras-uis.html",
+    "href": "projects/electrolineras-uis.html",
+    "title": "Electrolineras UIS",
+    "section": "",
+    "text": "← Volver a proyectos"
+  },
+  {
+    "objectID": "projects/electrolineras-uis.html#problema",
+    "href": "projects/electrolineras-uis.html#problema",
+    "title": "Electrolineras UIS",
+    "section": "Problema",
+    "text": "Problema\nLa adopción de vehículos eléctricos depende en buena medida de contar con puntos de carga bien ubicados. Instalar electrolineras sin analizar la red vial y la demanda puede dejar zonas sin cobertura o generar puntos subutilizados.\n\nContexto: movilidad eléctrica en Bucaramanga y el área metropolitana.\nPregunta principal: ¿dónde conviene ubicar puntos de carga para maximizar cobertura y uso?\nDecisión que habilita: priorizar ubicaciones y dimensionar la infraestructura."
+  },
+  {
+    "objectID": "projects/electrolineras-uis.html#datos",
+    "href": "projects/electrolineras-uis.html#datos",
+    "title": "Electrolineras UIS",
+    "section": "Datos",
+    "text": "Datos\n\n\n\n\n\n\n\nAspecto\nDetalle\n\n\n\n\nFuente\nGrafo vial de OpenStreetMap (OSMnx) y datos de electrolineras y puntos fijos del proyecto\n\n\nPeriodo\n[COMPLETAR]\n\n\nVolumen\n[COMPLETAR: nodos, aristas y puntos candidatos]\n\n\nVariables clave\ndistancia, tiempo de viaje, demanda, capacidad, ubicación\n\n\nLimitaciones\nDatos de demanda simulados; no reemplazan un estudio de campo\n\n\n\nEstructura: el grafo vial se carga desde datos/raw/grafo_bga.graphml; las electrolineras y los puntos fijos están en datos/data.py. La simulación genera historial de recargas para entrenar el modelo."
+  },
+  {
+    "objectID": "projects/electrolineras-uis.html#método",
+    "href": "projects/electrolineras-uis.html#método",
+    "title": "Electrolineras UIS",
+    "section": "Método",
+    "text": "Método\n\nConstrucción del grafo: descarga y limpieza de la red vial con OSMnx y NetworkX.\nAnálisis espacial: cálculo de distancias, cobertura y tiempos de viaje desde puntos candidatos.\nSimulación: generación de viajes y recargas para estimar demanda por zona.\nModelado: Random Forest y regresión logística para predecir demanda o probabilidad de uso.\nVisualización: mapas con Folium y gráficos con Matplotlib.\nInterfaz: menú de consola para ejecutar escenarios y revisar resultados.\n\nStack: Python, OSMnx, NetworkX, scikit-learn, pandas, Folium y Matplotlib."
+  },
+  {
+    "objectID": "projects/electrolineras-uis.html#resultados",
+    "href": "projects/electrolineras-uis.html#resultados",
+    "title": "Electrolineras UIS",
+    "section": "Resultados",
+    "text": "Resultados\n\n\nCOMPLETAR Cobertura de la demanda\n\n\nCOMPLETAR Reducción de distancia media\n\n\nCOMPLETAR F1 del modelo\n\n\nCOMPLETAR Puntos candidatos evaluados\n\n\n\n\n\nMétrica\nEscenario base\nEscenario optimizado\nComentario\n\n\n\n\nCobertura\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\nDistancia media al punto\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\nDemanda atendida\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\nMétrica del modelo\n[COMPLETAR]\n[COMPLETAR]\n[COMPLETAR]\n\n\n\nHallazgos principales:\n\n[COMPLETAR: zona con mayor demanda insatisfecha].\n[COMPLETAR: variable más importante del modelo].\n[COMPLETAR: sensibilidad a la cantidad de puntos instalados]."
+  },
+  {
+    "objectID": "projects/electrolineras-uis.html#insight-de-negocio",
+    "href": "projects/electrolineras-uis.html#insight-de-negocio",
+    "title": "Electrolineras UIS",
+    "section": "Insight de negocio",
+    "text": "Insight de negocio\n\n\n\n\n\n\nTip\n\n\n\nInsight: [COMPLETAR: por ejemplo, “un número reducido de puntos estratégicos cubre la mayor parte de la demanda, así que conviene priorizar ubicaciones por impacto antes que por cantidad”].\n\n\n\nRecomendación 1: [COMPLETAR: ubicación prioritaria].\nRecomendación 2: [COMPLETAR: capacidad sugerida por punto].\nSiguiente paso: [COMPLETAR: validar con datos reales de tráfico o con una encuesta de demanda]."
+  },
+  {
+    "objectID": "projects/electrolineras-uis.html#enlace-al-repo",
+    "href": "projects/electrolineras-uis.html#enlace-al-repo",
+    "title": "Electrolineras UIS",
+    "section": "Enlace al repo",
+    "text": "Enlace al repo\n\nRepositorio: ILOHU-cmd/iielectrolineras_v2\nDocumentación: [COMPLETAR: enlace al informe o notebook]\nCómo reproducirlo:\n\ngit clone https://github.com/ILOHU-cmd/iielectrolineras_v2.git\ncd iielectrolineras_v2\npython3 -m venv .venv\nsource .venv/bin/activate\npip install -r requirements.txt\npython main.py\n\nEl grafo vial debe descargarse con OSMnx o copiarse en datos/raw/grafo_bga.graphml antes de ejecutar el proyecto.\n\n\n← Volver a proyectos"
+  }
+]

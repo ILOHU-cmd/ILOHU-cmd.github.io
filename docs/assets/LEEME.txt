@@ -1,0 +1,9 @@
+# assets
+
+Guarda aquí los archivos que se publican con el sitio:
+
+- `emerson-ballesteros-cv.pdf` — CV en PDF (enlazado desde `cv.qmd`).
+- `certificados/` — capturas o PDF de los certificados.
+- `img/` — imágenes para las páginas de proyectos.
+
+Los archivos de esta carpeta se copian tal cual a `docs/` cuando ejecutas `quarto render`.
